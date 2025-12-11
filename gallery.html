@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Bab Tounès</title>
+    <meta name="description" content="Explore our gallery showcasing the ambiance, dishes, and Tunisian-inspired decor of Bab Tounès restaurant.">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-dark-800 text-sand-100 font-sans">
+    <custom-navbar></custom-navbar>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative py-32 flex items-center justify-center bg-gradient-to-b from-dark-800 to-terracotta-600 overflow-hidden">
+            <div class="absolute inset-0 bg-[url('http://static.photos/restaurant/1200x630/20')] bg-cover bg-center opacity-30"></div>
+            <div class="container mx-auto px-6 z-10 text-center">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6">Galerie</h1>
+                <p class="text-xl md:text-2xl max-w-2xl mx-auto">Un voyage visuel à travers Bab Tounès</p>
+</div>
+        </section>
+
+        <!-- Gallery Filters -->
+        <section class="py-12 bg-dark-800 sticky top-0 z-50 shadow-md">
+            <div class="container mx-auto px-6">
+                <div class="flex overflow-x-auto gap-4 pb-2 scrollbar-hide">
+                    <button class="filter-btn whitespace-nowrap px-4 py-2 bg-terracotta-600 rounded-full text-sand-100 font-medium" data-filter="all">Tout</button>
+                    <button class="filter-btn whitespace-nowrap px-4 py-2 bg-dark-800 hover:bg-terracotta-600 rounded-full text-sand-100 font-medium transition-colors" data-filter="food">Cuisine</button>
+                    <button class="filter-btn whitespace-nowrap px-4 py-2 bg-dark-800 hover:bg-terracotta-600 rounded-full text-sand-100 font-medium transition-colors" data-filter="interior">Intérieur</button>
+                    <button class="filter-btn whitespace-nowrap px-4 py-2 bg-dark-800 hover:bg-terracotta-600 rounded-full text-sand-100 font-medium transition-colors" data-filter="events">Événements</button>
+</div>
+            </div>
+        </section>
+
+        <!-- Gallery Grid -->
+        <section class="py-16 bg-dark-800">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Image 1 -->
+                    <div class="gallery-item food" data-category="food">
+                        <div class="relative overflow-hidden rounded-xl h-64 group">
+                            <img src="./images/Screenshot_5-12-2025_195238_www.instagram.com.jpeg" alt="Couscous dish" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 gallery-image cursor-pointer">
+                            <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                <i data-feather="maximize" class="w-8 h-8 text-white"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Image 2 -->
+                    <div class="gallery-item food" data-category="food">
+                        <div class="relative overflow-hidden rounded-xl h-64 group">
+                            <img src="./images/Screenshot_5-12-2025_195225_www.instagram.com.jpeg" alt="Tunisian dish" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 gallery-image cursor-pointer">
+                            <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                <i data-feather="maximize" class="w-8 h-8 text-white"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Image 3 -->
+                    <div class="gallery-item food" data-category="food">
+                        <div class="relative overflow-hidden rounded-xl h-64 group">
+                            <img src="./images/Screenshot_5-12-2025_19525_www.instagram.com.jpeg" alt="Tunisian dish" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 gallery-image cursor-pointer">
+                            <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                <i data-feather="maximize" class="w-8 h-8 text-white"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Image 4 -->
+                    <div class="gallery-item food" data-category="food">
+                        <div class="relative overflow-hidden rounded-xl h-64 group">
+                            <img src="./images/unnamed (7).jpg" alt="Tunisian dish" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 gallery-image cursor-pointer">
+                            <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                <i data-feather="maximize" class="w-8 h-8 text-white"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Image 5 -->
+                    <div class="gallery-item food" data-category="food">
+                        <div class="relative overflow-hidden rounded-xl h-64 group">
+                            <img src="./images/unnamed (8).jpg" alt="Tunisian dish" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 gallery-image cursor-pointer">
+                            <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                <i data-feather="maximize" class="w-8 h-8 text-white"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Image 6 -->
+                    <div class="gallery-item food" data-category="food">
+                        <div class="relative overflow-hidden rounded-xl h-64 group">
+                            <img src="./images/unnamed (9).jpg" alt="Tunisian dish" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 gallery-image cursor-pointer">
+                            <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                <i data-feather="maximize" class="w-8 h-8 text-white"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Image 7 -->
+                    <div class="gallery-item food" data-category="food">
+                        <div class="relative overflow-hidden rounded-xl h-64 group">
+                            <img src="./images/Screenshot_5-12-2025_195133_www.instagram.com.jpeg" alt="Tunisian dish" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 gallery-image cursor-pointer">
+                            <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                <i data-feather="maximize" class="w-8 h-8 text-white"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Image 8 -->
+                    <div class="gallery-item food" data-category="food">
+                        <div class="relative overflow-hidden rounded-xl h-64 group">
+                            <img src="./images/2023-11-22.jpg" alt="Tunisian dish" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 gallery-image cursor-pointer">
+                            <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                <i data-feather="maximize" class="w-8 h-8 text-white"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Image 9 -->
+                    <div class="gallery-item food" data-category="food">
+                        <div class="relative overflow-hidden rounded-xl h-64 group">
+                            <img src="./images/unnamed (6).jpg" alt="Tunisian dish" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 gallery-image cursor-pointer">
+                            <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                <i data-feather="maximize" class="w-8 h-8 text-white"></i>
+                            </div>
+                        </div>
+                    </div>
+</div>
+            </div>
+        </section>
+    </main>
+
+    <custom-footer></custom-footer>
+
+    <script src="components/navbar.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="script.js"></script>
+    <script>
+        feather.replace();
+        
+        // Gallery filtering
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('bg-terracotta-600'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('bg-terracotta-600');
+                    
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    // Show or hide items based on filter
+                    galleryItems.forEach(item => {
+                        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

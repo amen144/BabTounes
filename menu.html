@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="fr" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | Bab Tounès</title>
+    <meta name="description" content="Découvrez notre menu tunisien authentique avec des plats traditionnels, des entrées savoureuses aux desserts exquis et boissons.">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-dark-800 text-sand-100 font-sans">
+    <custom-navbar></custom-navbar>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative py-32 flex items-center justify-center bg-gradient-to-b from-dark-800 to-terracotta-600 overflow-hidden">
+            <div class="absolute inset-0 bg-[url('https://huggingface.co/spaces/fezdi/taste-of-tunisian-sunsets/resolve/main/images/392746017_1349455525945769_573724901174251276_n.jpg')] bg-cover bg-center opacity-30"></div>
+            <div class="container mx-auto px-6 z-10 text-center">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6">Notre Menu</h1>
+                <p class="text-xl md:text-2xl max-w-2xl mx-auto">Un voyage à travers les saveurs authentiques de Tunisie</p>
+</div>
+        </section>
+
+        <!-- Menu Navigation -->
+        <section class="py-12 bg-dark-800 sticky top-0 z-50 shadow-md">
+            <div class="container mx-auto px-6">
+                <div class="flex overflow-x-auto gap-4 pb-2 scrollbar-hide">
+                    <a href="#entrees" class="whitespace-nowrap px-4 py-2 bg-terracotta-600 rounded-full text-sand-100 font-medium">Entrées</a>
+                    <a href="#plats" class="whitespace-nowrap px-4 py-2 bg-dark-800 hover:bg-terracotta-600 rounded-full text-sand-100 font-medium transition-colors">Plats Principaux</a>
+                    <a href="#desserts" class="whitespace-nowrap px-4 py-2 bg-dark-800 hover:bg-terracotta-600 rounded-full text-sand-100 font-medium transition-colors">Desserts</a>
+                    <a href="#boissons" class="whitespace-nowrap px-4 py-2 bg-dark-800 hover:bg-terracotta-600 rounded-full text-sand-100 font-medium transition-colors">Boissons</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Starters -->
+        <section id="entrees" class="py-16 bg-dark-800">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold mb-12 text-center text-terracotta-500">Entrées</h2>
+                <div class="grid grid-cols-1 gap-6">
+                    <div class="menu-item bg-dark-800 rounded-xl p-6 border border-terracotta-600 border-opacity-30">
+                        <h3 class="text-xl font-semibold mb-2 text-terracotta-400">1) Assortiment de salades tunisiennes</h3>
+                    </div>
+                    <div class="menu-item bg-dark-800 rounded-xl p-6 border border-terracotta-600 border-opacity-30">
+                        <h3 class="text-xl font-semibold mb-2 text-terracotta-400">2) Brik au choix ou Duo doigts de Fatma ou Soupe du jour</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Dishes -->
+        <section id="plats" class="py-16 bg-terracotta-600 bg-opacity-10">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold mb-12 text-center text-terracotta-500">Plats Principaux</h2>
+                <div class="grid grid-cols-1 gap-6">
+                    <div class="menu-item bg-dark-800 rounded-xl p-6 border border-terracotta-600 border-opacity-30">
+                        <h3 class="text-xl font-semibold mb-2 text-terracotta-400">Couscous au choix</h3>
+                        <p class="text-sand-200">(Agneau/fruits secs, Agneau/ légumes, Poulet/fruits secs. Poulet / légumes, Poisson / légumes)</p>
+                    </div>
+                    <div class="menu-item bg-dark-800 rounded-xl p-6 border border-terracotta-600 border-opacity-30">
+                        <h3 class="text-xl font-semibold mb-2 text-terracotta-400">Kamounia aux seiches et chevrettes</h3>
+                    </div>
+                    <div class="menu-item bg-dark-800 rounded-xl p-6 border border-terracotta-600 border-opacity-30">
+                        <h3 class="text-xl font-semibold mb-2 text-terracotta-400">Kabkabou</h3>
+                    </div>
+                    <div class="menu-item bg-dark-800 rounded-xl p-6 border border-terracotta-600 border-opacity-30">
+                        <h3 class="text-xl font-semibold mb-2 text-terracotta-400">Filet de daurade</h3>
+                    </div>
+                    <div class="menu-item bg-dark-800 rounded-xl p-6 border border-terracotta-600 border-opacity-30">
+                        <h3 class="text-xl font-semibold mb-2 text-terracotta-400">Sfafed Bab Tounès</h3>
+                    </div>
+                    <div class="menu-item bg-dark-800 rounded-xl p-6 border border-terracotta-600 border-opacity-30">
+                        <h3 class="text-xl font-semibold mb-2 text-terracotta-400">Pâtes au choix (Fruits de mer, agneau, poisson, poulet, Putanesca)</h3>
+                    </div>
+                    <div class="menu-item bg-dark-800 rounded-xl p-6 border border-terracotta-600 border-opacity-30">
+                        <h3 class="text-xl font-semibold mb-2 text-terracotta-400">Mioukhia au jarret de veau</h3>
+                    </div>
+                    <div class="menu-item bg-dark-800 rounded-xl p-6 border border-terracotta-600 border-opacity-30">
+                        <h3 class="text-xl font-semibold mb-2 text-terracotta-400">Kleya à la viande de veau</h3>
+                    </div>
+                    <div class="menu-item bg-dark-800 rounded-xl p-6 border border-terracotta-600 border-opacity-30">
+                        <h3 class="text-xl font-semibold mb-2 text-terracotta-400">Marka Hlouwa</h3>
+                    </div>
+                </div>
+                <div class="mt-8 text-center">
+                    <p class="text-lg text-sand-200">Menu (2 entrées + 1 plat + 1 dessert): 65dt</p>
+                    <p class="text-lg text-sand-200">Menu végétarien: 55dt</p>
+                    <p class="text-lg text-sand-200">Plat: 35dt - Entrée1: 18dt - Entrée2: 9dt</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Desserts -->
+        <section id="desserts" class="py-16 bg-dark-800">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold mb-12 text-center text-terracotta-500">Desserts</h2>
+                <div class="grid grid-cols-1 gap-6">
+                    <div class="menu-item bg-dark-800 rounded-xl p-6 border border-terracotta-600 border-opacity-30">
+                        <h3 class="text-xl font-semibold mb-2 text-terracotta-400">Duo Assida zgougou et noisettes</h3>
+                    </div>
+                    <div class="menu-item bg-dark-800 rounded-xl p-6 border border-terracotta-600 border-opacity-30">
+                        <h3 class="text-xl font-semibold mb-2 text-terracotta-400">Khobzet Hwé</h3>
+                    </div>
+                    <div class="menu-item bg-dark-800 rounded-xl p-6 border border-terracotta-600 border-opacity-30">
+                        <h3 class="text-xl font-semibold mb-2 text-terracotta-400">Coupe de fruits de saison</h3>
+                    </div>
+                    <div class="menu-item bg-dark-800 rounded-xl p-6 border border-terracotta-600 border-opacity-30">
+                        <h3 class="text-xl font-semibold mb-2 text-terracotta-400">Fondant chocolat</h3>
+                    </div>
+                </div>
+                <div class="mt-8 text-center">
+                    <p class="text-lg text-sand-200">Dessert: 12dt</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Drinks -->
+        <section id="boissons" class="py-16 bg-terracotta-600 bg-opacity-10">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold mb-12 text-center text-terracotta-500">Boissons</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="menu-item bg-dark-800 rounded-xl p-6 border border-terracotta-600 border-opacity-30">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-terracotta-400">Eau plate (0.51)</h3>
+                            <span class="text-terracotta-400 font-bold">2.5dt</span>
+                        </div>
+                    </div>
+                    <div class="menu-item bg-dark-800 rounded-xl p-6 border border-terracotta-600 border-opacity-30">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-terracotta-400">Eau plate (11)</h3>
+                            <span class="text-terracotta-400 font-bold">4.5dt</span>
+                        </div>
+                    </div>
+                    <div class="menu-item bg-dark-800 rounded-xl p-6 border border-terracotta-600 border-opacity-30">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-terracotta-400">Eau gazéifiée (11)</h3>
+                            <span class="text-terracotta-400 font-bold">5dt</span>
+                        </div>
+                    </div>
+                    <div class="menu-item bg-dark-800 rounded-xl p-6 border border-terracotta-600 border-opacity-30">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-terracotta-400">Soda</h3>
+                            <span class="text-terracotta-400 font-bold">5dt</span>
+                        </div>
+                    </div>
+                    <div class="menu-item bg-dark-800 rounded-xl p-6 border border-terracotta-600 border-opacity-30">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-terracotta-400">Heineken (Bière sans alcool)</h3>
+                            <span class="text-terracotta-400 font-bold">8dt</span>
+                        </div>
+                    </div>
+                    <div class="menu-item bg-dark-800 rounded-xl p-6 border border-terracotta-600 border-opacity-30">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-terracotta-400">Celestia (Bière sans alcool)</h3>
+                            <span class="text-terracotta-400 font-bold">7dt</span>
+                        </div>
+                    </div>
+                    <div class="menu-item bg-dark-800 rounded-xl p-6 border border-terracotta-600 border-opacity-30">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-terracotta-400">Shark</h3>
+                            <span class="text-terracotta-400 font-bold">9dt</span>
+                        </div>
+                    </div>
+                    <div class="menu-item bg-dark-800 rounded-xl p-6 border border-terracotta-600 border-opacity-30">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-terracotta-400">Citronnade</h3>
+                            <span class="text-terracotta-400 font-bold">7dt</span>
+                        </div>
+                    </div>
+                    <div class="menu-item bg-dark-800 rounded-xl p-6 border border-terracotta-600 border-opacity-30">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-terracotta-400">Jus d'orange</h3>
+                            <span class="text-terracotta-400 font-bold">7dt</span>
+                        </div>
+                    </div>
+                    <div class="menu-item bg-dark-800 rounded-xl p-6 border border-terracotta-600 border-opacity-30">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-terracotta-400">Jus de fraise</h3>
+                            <span class="text-terracotta-400 font-bold">8dt</span>
+                        </div>
+                    </div>
+                    <div class="menu-item bg-dark-800 rounded-xl p-6 border border-terracotta-600 border-opacity-30">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-terracotta-400">Café capsule</h3>
+                            <span class="text-terracotta-400 font-bold">5dt</span>
+                        </div>
+                    </div>
+                    <div class="menu-item bg-dark-800 rounded-xl p-6 border border-terracotta-600 border-opacity-30">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-terracotta-400">Café turc</h3>
+                            <span class="text-terracotta-400 font-bold">5dt</span>
+                        </div>
+                    </div>
+                    <div class="menu-item bg-dark-800 rounded-xl p-6 border border-terracotta-600 border-opacity-30">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-terracotta-400">Thé à la menthe</h3>
+                            <span class="text-terracotta-400 font-bold">5dt</span>
+                        </div>
+                    </div>
+                    <div class="menu-item bg-dark-800 rounded-xl p-6 border border-terracotta-600 border-opacity-30">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-terracotta-400">Thé aux pignons</h3>
+                            <span class="text-terracotta-400 font-bold">8dt</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reservation CTA -->
+        <section class="py-20 bg-gradient-to-b from-terracotta-600 to-terracotta-500">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold mb-6">Prêt pour une expérience culinaire tunisienne inoubliable ?</h2>
+<a href="https://wa.me/21623458458" class="inline-block bg-sand-100 hover:bg-sand-200 text-dark-800 font-semibold px-8 py-3 rounded-full transition-all duration-300">Réserver maintenant</a>
+            </div>
+        </section>
+    </main>
+
+    <custom-footer></custom-footer>
+
+    <script src="components/navbar.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="script.js"></script>
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>
