@@ -73,6 +73,16 @@ class CustomNavbar extends HTMLElement {
                     border: none;
                     color: rgb(245, 241, 232);
                     cursor: pointer;
+                    padding: 0.25rem;
+                }
+
+                .mobile-menu-button .icon {
+                    width: 24px;
+                    height: 24px;
+                }
+
+                .mobile-menu-button .hidden {
+                    display: none;
                 }
 
                 .mobile-menu {
@@ -131,8 +141,15 @@ class CustomNavbar extends HTMLElement {
                         <option value="de">Deutsch</option>
                     </select>
 </div>
-<button class="mobile-menu-button">
-                    <i data-feather="menu"></i>
+                <button class="mobile-menu-button" aria-label="Open menu" aria-expanded="false">
+                    <!-- Hamburger icon -->
+                    <svg class="icon icon-open" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <!-- Close icon -->
+                    <svg class="icon icon-close hidden" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M6 6l12 12M6 18L18 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
                 </button>
             </div>
                 <div class="mobile-menu">
@@ -148,6 +165,103 @@ class CustomNavbar extends HTMLElement {
                     </select>
                 </div>
 `;
+        // after rendering, wire up interactions and adjust page padding
+        requestAnimationFrame(() => {
+            const menuButton = this.shadowRoot.querySelector('.mobile-menu-button');
+            const mobileMenu = this.shadowRoot.querySelector('.mobile-menu');
+
+            const updateBodyPadding = () => {
+                // Prefer measuring the host; fall back to measuring inner parts
+                let h = 0;
+                try {
+                    h = this.getBoundingClientRect().height;
+                } catch (e) {
+                    h = 0;
+                }
+
+                const container = this.shadowRoot.querySelector('.container');
+                const mobileMenuEl = this.shadowRoot.querySelector('.mobile-menu');
+
+                if ((!h || h < 1) && container) {
+                    h = container.getBoundingClientRect().height;
+                }
+
+                // If the mobile menu is open add its height
+                if (mobileMenuEl && mobileMenuEl.classList.contains('open')) {
+                    h += mobileMenuEl.scrollHeight || mobileMenuEl.getBoundingClientRect().height || 0;
+                }
+
+                if (h && document && document.body) {
+                    document.body.style.paddingTop = `${Math.ceil(h)}px`;
+                }
+            };
+
+            updateBodyPadding();
+
+            this.__navResizeObserver = new ResizeObserver(updateBodyPadding);
+            this.__navResizeObserver.observe(this);
+
+            const onResize = () => updateBodyPadding();
+            window.addEventListener('resize', onResize);
+
+            if (menuButton) {
+                menuButton.addEventListener('click', () => {
+                    if (!mobileMenu) return;
+                    const isOpen = mobileMenu.classList.toggle('open');
+                    // update aria and icon visibility
+                    menuButton.setAttribute('aria-expanded', String(isOpen));
+                    const openIcon = menuButton.querySelector('.icon-open');
+                    const closeIcon = menuButton.querySelector('.icon-close');
+                    if (openIcon && closeIcon) {
+                        if (isOpen) {
+                            openIcon.classList.add('hidden');
+                            closeIcon.classList.remove('hidden');
+                        } else {
+                            openIcon.classList.remove('hidden');
+                            closeIcon.classList.add('hidden');
+                        }
+                    }
+
+                    // update padding to account for expanded/collapsed menu
+                    requestAnimationFrame(updateBodyPadding);
+                });
+            }
+
+            // Close mobile menu when a link is clicked and update padding
+            const mobileLinks = this.shadowRoot.querySelectorAll('.mobile-menu a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (mobileMenu && mobileMenu.classList.contains('open')) {
+                        mobileMenu.classList.remove('open');
+                        // restore button state
+                        if (menuButton) {
+                            menuButton.setAttribute('aria-expanded', 'false');
+                            const openIcon = menuButton.querySelector('.icon-open');
+                            const closeIcon = menuButton.querySelector('.icon-close');
+                            if (openIcon && closeIcon) {
+                                openIcon.classList.remove('hidden');
+                                closeIcon.classList.add('hidden');
+                            }
+                        }
+                        requestAnimationFrame(updateBodyPadding);
+                    }
+                });
+            });
+
+            this.__cleanup = () => {
+                window.removeEventListener('resize', onResize);
+                if (this.__navResizeObserver) {
+                    this.__navResizeObserver.disconnect();
+                    this.__navResizeObserver = null;
+                }
+            };
+        });
+    }
+
+    disconnectedCallback() {
+        if (this.__cleanup) this.__cleanup();
+        // remove padding applied to body when the component is removed
+        if (document && document.body) document.body.style.paddingTop = '';
     }
 }
 
